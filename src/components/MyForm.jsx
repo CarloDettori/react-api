@@ -21,7 +21,7 @@ const newPost = {
 
 function MyForm() {
     const [formPost, setFormPost] = useState(initialPost);
-    const [blogPosts, SetBlogPosts] = useState(posts)
+    //const [blogPosts, SetBlogPosts] = useState(posts)
     //const filteredPost = filterPot(posts, search)
     const [myPost, setMyPost] = useState(newPost)
     const [postList, setPostList] = useState([]);

@@ -1,4 +1,4 @@
-
+import { useEffect } from "react";
 import PublishedPostComponent from "./PublishedPostComponent";
 import CardComponent from "./CardComponent";
 import TagList from "./TagList";
@@ -18,6 +18,8 @@ function MainComponent() {
     const publishedPosts = PublishedPostComponent();
     const tagList = TagList();
     //console.log(publishedPosts)
+
+    useEffect
 
     return (
         <>
