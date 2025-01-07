@@ -2,7 +2,7 @@
 //import posts from "../data/posts";
 
 import { useEffect } from "react";
-const postsUrl = "http://localhost:3000"
+const postsUrl = "http://localhost:5500"
 useEffect(() => {
     getData()
 }, []);
