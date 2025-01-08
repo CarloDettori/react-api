@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import CardComponent from "./CardComponent";
-import MyForm from "./MyForm";
 import axios from "axios"
 
 
@@ -22,7 +21,7 @@ function MainComponent() {
     //console.log(publishedPosts)
     function getData() {
         axios
-            .get(postsUrl)
+            .get(postsUrl + "/posts")
             .then((res) => {
                 console.log(res.data)
                 setPublishedPosts(res.data.data)
@@ -34,7 +33,7 @@ function MainComponent() {
 
             })
     }
-
+    console.log(publishedPosts)
 
     return (
         <>
@@ -43,7 +42,6 @@ function MainComponent() {
                     {publishedPosts.map((post) => (
                         <CardComponent key={`card-${post.id}`} element={post} />
                     ))}
-
                 </div>
                 {/* <MyForm tags={tagList} /> */}
             </main>
