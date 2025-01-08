@@ -4,7 +4,7 @@ import HeaderComponent from './components/HeaderComponent'
 import FooterComponent from './components/FooterComponent'
 import MainComponent from './components/MainComponent'
 
-import PublishedPostComponent from "./components/PublishedPostComponent.jsx";
+
 import './App.css'
 
 function App() {

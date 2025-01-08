@@ -1,8 +1,7 @@
-import { useEffect } from "react";
-import PublishedPostComponent from "./PublishedPostComponent";
+import { useState, useEffect } from "react";
 import CardComponent from "./CardComponent";
-import TagList from "./TagList";
 import MyForm from "./MyForm";
+import axios from "axios"
 
 
 // const bestPost = {
@@ -14,12 +13,28 @@ import MyForm from "./MyForm";
 //     tags: ["js", "css"],
 // };
 
+const postsUrl = "http://localhost:3000"
 function MainComponent() {
-    const publishedPosts = PublishedPostComponent();
-    const tagList = TagList();
+    const [publishedPosts, setPublishedPosts] = useState([])
+    useEffect(() => {
+        getData()
+    }, []);
     //console.log(publishedPosts)
+    function getData() {
+        axios
+            .get(postsUrl)
+            .then((res) => {
+                console.log(res.data)
+                setPublishedPosts(res.data.data)
+            })
+            .catch((error) => {
+                console.log("error")
+            })
+            .finally(() => {
 
-    useEffect
+            })
+    }
+
 
     return (
         <>
@@ -30,7 +45,7 @@ function MainComponent() {
                     ))}
 
                 </div>
-                <MyForm tags={tagList} />
+                {/* <MyForm tags={tagList} /> */}
             </main>
 
             {/* <aside>
