@@ -1,4 +1,4 @@
-import posts from "../data/posts";
+//import posts from "../data/posts";
 function TagList() {
     const tagList = [];
     const allTags = posts.forEach(element => {

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import posts from "../data/posts";
+//import posts from "../data/posts";
 //import CheckTagComponent from "./CheckTagComponent";
 //import TagList from "./TagList";
 
