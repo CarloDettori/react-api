@@ -21,10 +21,14 @@ function MainComponent() {
     //console.log(publishedPosts)
     function getData() {
         axios
-            .get(postsUrl + "/posts")
+            .get(postsUrl + "/posts/")
             .then((res) => {
-                console.log(res.data)
-                setPublishedPosts(res.data.data)
+                //console.log(res.data)
+                setPublishedPosts(res.data.filter((post) => {
+                    if (post.published == true) {
+                        return post;
+                    }
+                }))
             })
             .catch((error) => {
                 console.log("error")
